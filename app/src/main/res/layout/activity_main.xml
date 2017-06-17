@@ -6,7 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="android.kan.nop.myandroid.MainActivity">
-
+<ImageView
+    android:src="@drawable/bg_siam"
+    android:scaleType="centerCrop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
 
 <LinearLayout
     android:padding="@dimen/padding"
@@ -28,6 +32,7 @@
 </LinearLayout>
 
     <LinearLayout
+
         android:layout_centerVertical="true"
         android:gravity="center_horizontal"
         android:layout_margin="@dimen/margin"
@@ -42,10 +47,46 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></LinearLayout>
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@mipmap/ic_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryLight"
+                android:hint="User"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_password" />
+
+            <EditText
+
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="password" />
+
+        </LinearLayout>
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/h2"
+            android:text="New Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <Button

@@ -2,4 +2,6 @@
     <string name="app_name">My Android</string>
     <string name="title">ม.สยาม</string>
     <string name="login">Login</string>
+    <string name="user">user</string>
+    <string name="password">user</string>
 </resources>
