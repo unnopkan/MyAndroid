@@ -13,6 +13,7 @@ public class NewRegisterActivity extends AppCompatActivity {
     private ImageView imageView;
     private EditText nameEditText, userEditText, passwordEditText;
     private Button button;
+    private String nameString, userString, passwordString;
 
 
     @Override
@@ -26,7 +27,35 @@ public class NewRegisterActivity extends AppCompatActivity {
         // Back Controller
         backController();
 
+        // NewRegister Controller
+        newRegisterController();
+
     }   // Main Method
+
+    private void newRegisterController() {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Get Value From Edit Text
+                nameString = nameEditText.getText().toString().trim();
+                userString = userEditText.getText().toString().trim();
+                passwordString = passwordEditText.getText().toString().trim();
+
+                // Check Space
+                if (nameString.equals("") || userString.equals("") || passwordString.equals("") ) {
+                    // Have Space
+                    MyAlert myAlert = new MyAlert(NewRegisterActivity.this);
+                    myAlert.myDialog("Have Space", "Please Fill All Blank");
+
+                } else {
+                    // No Space
+                }
+
+
+            }
+        });
+    }
 
     private void backController() {
         imageView.setOnClickListener(new View.OnClickListener() {
