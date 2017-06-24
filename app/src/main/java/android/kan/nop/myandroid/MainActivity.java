@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -87,6 +88,14 @@ public class MainActivity extends AppCompatActivity {
                     if (b){
                         myAlert.myDialog(getResources().getString(R.string.titleUserFalse),
                                 getResources().getString(R.string.messageUserFalse));
+
+                    } else if (passwordString.equals(loginStrings1[3])) {
+                        Toast.makeText(MainActivity.this, "Welcome" + loginStrings1[1],
+                                Toast.LENGTH_SHORT).show();
+
+                    } else {
+                        myAlert.myDialog(getResources().getString(R.string.titlePasswordFalse),
+                                getResources().getString(R.string.messagePasswordFalse));
 
                     }
 
