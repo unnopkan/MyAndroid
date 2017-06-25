@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                         intent.putExtra("Login", loginStrings1);
                         startActivity(intent);
+
+
+
+
                         finish();
 
                     } else {
